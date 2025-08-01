@@ -120,6 +120,9 @@ function mostrarPantallaFinal() {
   document.getElementById("pantalla-final").style.display = "flex";
   
 }
+document.querySelector('.boton-si').addEventListener('click', () => {
+  document.getElementById('form-respuesta').submit(); // Esto envía el formulario
+});
 
 
 
