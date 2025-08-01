@@ -1,0 +1,226 @@
+
+body{
+  background-color: pink;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+ }
+
+.pantalla{
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
+}
+#mensaje-personal {
+  max-width: 90%;
+  width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #333;
+  position: relative;
+  z-index: 10;
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+
+
+ button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #ff4d88;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #e6005c;
+}
+
+button:nth-of-type(2) {
+  background-color: #999;
+ }
+
+button:nth-of-type(2):hover {
+  background-color: #777;
+ }
+ 
+.maquina-escribir {
+  white-space: pre-line;
+  text-align: center;
+  overflow: hidden;
+  font-size: 1.5rem;
+  width: fit-content;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#cursor {
+  display: inline-block;
+  animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.corazones {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* para que no interfiera con los botones */
+  overflow: hidden;
+  z-index: 0;
+}
+
+.corazones span {
+  position: absolute;
+  display: block;
+  color: #ff69b4;
+  font-size: 2rem;
+  animation: flotar 10s linear infinite;
+  top: 100%;
+}
+
+.corazones span:nth-child(1) { left: 20%; animation-delay: 0s; }
+.corazones span:nth-child(2) { left: 40%; animation-delay: 2s; }
+.corazones span:nth-child(3) { left: 60%; animation-delay: 4s; }
+.corazones span:nth-child(4) { left: 80%; animation-delay: 6s; }
+.corazones span:nth-child(5) { left: 10%; animation-delay: 1s; }
+.corazones span:nth-child(6) { left: 70%; animation-delay: 3s; }
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.3em;
+  background: black;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+#mensaje-personal {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+#pregunta-final {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+#pregunta-final button {
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  background-color: #ff4d88;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#pregunta-final button:hover {
+  background-color: #e6005c;
+}
+
+#pregunta-final button:nth-of-type(2) {
+  background-color: #999;
+}
+
+#pregunta-final button:nth-of-type(2):hover {
+  background-color: #777;
+}
+
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+}
+
+.boton-si {
+  animation: latido 1.2s infinite;
+}
+#pantalla-final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contenido-final {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  max-width: 90%;
+}
+#pantalla-noo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+.imagenes-alrededor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.foto {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
+  animation: latido 1.2s infinite;
+}
+
+/* Opcional: efecto latido en las fotos */
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}

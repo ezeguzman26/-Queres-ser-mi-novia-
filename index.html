@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Una pregunta muy especial ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div id="pantalla-1" class="pantalla">
+  <h1 id="maquina-escribir" class="maquina-escribir"></h1>
+  
+  <div id="pregunta" style="display: none;">
+    <p><strong>¿Querés pasar a la siguiente etapa?</strong></p>
+    <button onclick="mostrarPantalla2()">Sí, quiero❤️</button>
+    <button onclick="mostrarPantallaNo()">No 😔</button>
+  </div>
+</div>
+
+  <div id="pantalla-2" class="pantalla" style="display: none;">
+    <p id="mensaje-personal">
+      <span id="mensaje-texto"></span><span class="cursor"></span>
+    </p>
+    <div id="pregunta-final" style="display: none; margin-top: 40px;">
+  <p><strong>¿Querés volver a ser mi novia?</strong></p>
+  <button class="boton-si" onclick="mostrarPantallaFinal()">Obvio que sí mi amor 😍 </button>
+  <button class="boton-no" onclick="mostrarPantallaNo()">No 😔</button>
+</div>
+
+  </div>
+
+  <div id="pantalla-no" class="pantalla" style="display: none;">
+     <p>
+       Entiendo... gracias por leer hasta acá.  
+       Siempre voy a desearte lo mejor 🌟
+     </p>
+  </div>
+  <div class="corazones">
+   <span>💖</span>
+   <span>💘</span>
+   <span>💕</span>
+   <span>💗</span>
+   <span>💓</span>
+   <span>💞</span>
+  </div>
+
+  <div id="pantalla-final" style="display: none;"  class="pantalla">
+   <div class="imagenes-alrededor">
+  <img src="imagenes\img1wps.jpg" class="foto" alt="Foto 1">
+    <img src="imagenes/img2wps.jpg" class="foto" alt="Foto 2">
+    <img src="imagenes/img3wps.jpg" class="foto" alt="Foto 3">
+    <img src="imagenes/img4wps.jpg" class="foto" alt="Foto 4">
+    <img src="imagenes/img5wps.jpg" class="foto" alt="Foto 5">
+   </div>
+
+   <div class="contenido-final">
+    <h2>💖 ¡Feliz dia de la novia mi vida! 💖</h2>
+    <p id="mensaje-final"></p>
+   </div>
+  </div>
+
+  <div id="pantalla-noo" style="display: none;" class="pantalla">
+   <div class="contenido-final">
+    <h2>😢 ¿Segura que no? 😢</h2>
+    <p>Bueno... si cambiás de opinión, acá voy a estar esperándote con todo mi amor. 💔</p>
+   </div>
+  </div>
+
+  <!-- Pantalla luego del SÍ -->
+
+
+
+  <script src="script.js"></script
+  
+
+
+</body>
+</html>
