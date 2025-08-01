@@ -118,7 +118,7 @@ let intervalo = setInterval(escribirTexto, 50);
 function mostrarPantallaFinal() {
   document.getElementById("pantalla-2").style.display = "none";
   document.getElementById("pantalla-final").style.display = "flex";
-  
+  document.getElementById("form-respuesta").submit();
 }
 
 
